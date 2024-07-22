@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>DWAtividadeEconomicaNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Atividade Economica Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWAtividadesEconomicasSecNetrin__c</fullName>
+        <label>Atividades Economicas Sec Netrin</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DWBairroNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Bairro Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWCapitalSocialNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Capital Social Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWCepNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Cep Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWComplementoNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Complemento Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWDataConsultaNetrinReceita__c</fullName>
+        <label>Data Ultima Consulta Netrin Receita</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DWDataConsultaNetrinSintegra__c</fullName>
+        <label>Data Ultima Consulta Netrin Sintegra</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DWDataConsultaNetrinSuframa__c</fullName>
+        <label>Data Ultima Consulta Netrin Suframa</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DWDataInicioAtividadeNetrin__c</fullName>
+        <label>Data Inicio Atividade Netrin</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DWDataSituacaoCadastralNetrin__c</fullName>
+        <label>Data Situacao Cadastral Netrin</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DWDataSituacaoEspecialNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Data Situacao Especial Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWEfrNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Efr Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWEmailNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Email Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWInscricaoEstadualNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Inscricao Estadual Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWLogradouroNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Logradouro Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWMotivoSituacaoNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo Situacao Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWMunicipioNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Municipio Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWNaturezaJuridicaNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Natureza Juridica Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWNomeFantasiaNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Nome Fantasia Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWNumeroNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Numero Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWObservacaoNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Observacao Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWPorteNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Porte Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWRazaoSocialNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Razao Social Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWRegimeRecolhimentoNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Regime Recolhimento Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWSituacaoCadastralNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Situacao Cadastral Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWSituacaoEspecialNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Situacao Especial Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWTelefoneNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Telefone Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWTipoCNPJNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo CNPJ Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWTipoIncentivoNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo Incentivo Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWUFNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>UF Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DWURLComprovanteNetrin__c</fullName>
+        <externalId>false</externalId>
+        <label>URL Comprovante Netrin</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DW_Documento__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Documento</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+</CustomObject>

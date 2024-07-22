@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <decisions>
+        <name>Copy_2_of_isCNPJ</name>
+        <label>Copy 2 of isCNPJ</label>
+        <locationX>50</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>naoCNPJ</defaultConnectorLabel>
+        <rules>
+            <name>Copy_2_of_verdadeiroCNPJ</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Document_Length</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>11.0</numberValue>
+                </rightValue>
+            </conditions>
+            <label>Copy 2 of verdadeiroCNPJ</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>isCNPJReceita</name>
+        <label>isCNPJReceita</label>
+        <locationX>710</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>naoCNPJ</defaultConnectorLabel>
+        <rules>
+            <name>verdadeiroCNPJ</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Document_Length</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>11.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DWFLTriggerConsultaNetrin</targetReference>
+            </connector>
+            <label>verdadeiroCNPJ</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>isCNPJSintegra</name>
+        <label>isCNPJSintegra</label>
+        <locationX>1150</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>naoCNPJ</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_verdadeiroCNPJ</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Document_Length</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>11.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DWFLTriggerConsultaNetrinSintegra</targetReference>
+            </connector>
+            <label>Copy 1 of verdadeiroCNPJ</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>isCNPJSUframa</name>
+        <label>isCNPJSUframa</label>
+        <locationX>1590</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>naoCNPJ</defaultConnectorLabel>
+        <rules>
+            <name>Copy_1_of_Copy_1_of_verdadeiroCNPJ</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Document_Length</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>11.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DWFLTriggerConsultaNetrinSuframa</targetReference>
+            </connector>
+            <label>Copy 1 of Copy 1 of verdadeiroCNPJ</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>Document_Length</name>
+        <dataType>Number</dataType>
+        <expression>LEN(
+    SUBSTITUTE(
+        SUBSTITUTE(
+            SUBSTITUTE(
+                SUBSTITUTE(
+                    SUBSTITUTE(
+                        SUBSTITUTE(
+                            TRIM({!$Record.DW_Documento__c}),
+                            &quot;.&quot;, &quot;&quot;),
+                        &quot;-&quot;, &quot;&quot;),
+                    &quot;/&quot;, &quot;&quot;),
+                &quot;(&quot;, &quot;&quot;),
+            &quot;)&quot;, &quot;&quot;),
+        &quot; &quot;, &quot;&quot;)
+)</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>DWDocNumberFormula</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!$Record.DW_Documento__c}, &quot;.&quot;, &quot;&quot;), &quot;-&quot;, &quot;&quot;), &quot;/&quot;, &quot;&quot;), &quot; &quot;, &quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>DWDocNumberFormulaNumber</name>
+        <dataType>Number</dataType>
+        <expression>VALUE(
+    SUBSTITUTE(
+        SUBSTITUTE(
+            SUBSTITUTE(
+                SUBSTITUTE(
+                    SUBSTITUTE(
+                        SUBSTITUTE(
+                            TRIM({!$Record.DW_Documento__c}),
+                            &quot;.&quot;, &quot;&quot;),
+                        &quot;-&quot;, &quot;&quot;),
+                    &quot;/&quot;, &quot;&quot;),
+                &quot;(&quot;, &quot;&quot;),
+            &quot;)&quot;, &quot;&quot;),
+        &quot; &quot;, &quot;&quot;)
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>DW FL Trigger Consulta Netrin {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DW FL Trigger Consulta  Netrin</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>694</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Copy_2_of_isCNPJ</targetReference>
+        </connector>
+        <object>Account</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <scheduledPaths>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>after_1_minutes_createddate</name>
+            <connector>
+                <targetReference>isCNPJReceita</targetReference>
+            </connector>
+            <label>after 1 minutes createddate</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>after_2_minutes_createddate</name>
+            <connector>
+                <targetReference>isCNPJSintegra</targetReference>
+            </connector>
+            <label>after 2 minutes createddate</label>
+            <offsetNumber>2</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>after_3_minutes_createddate</name>
+            <connector>
+                <targetReference>isCNPJSUframa</targetReference>
+            </connector>
+            <label>after 3 minutes createddate</label>
+            <offsetNumber>3</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <subflows>
+        <name>DWFLTriggerConsultaNetrin</name>
+        <label>DW FL Trigger Consulta Netrin</label>
+        <locationX>578</locationX>
+        <locationY>384</locationY>
+        <flowName>DWFlowSelecaoConsultasNegrin</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>servico</name>
+            <value>
+                <stringValue>receita</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>DWFLTriggerConsultaNetrinSintegra</name>
+        <label>DW FL Trigger Consulta Sintegra</label>
+        <locationX>1018</locationX>
+        <locationY>384</locationY>
+        <flowName>DWFlowSelecaoConsultasNegrin</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>servico</name>
+            <value>
+                <stringValue>sintegra</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>DWFLTriggerConsultaNetrinSuframa</name>
+        <label>DW FL Trigger Consulta Suframa</label>
+        <locationX>1458</locationX>
+        <locationY>384</locationY>
+        <flowName>DWFlowSelecaoConsultasNegrin</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>servico</name>
+            <value>
+                <stringValue>suframa</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>
